@@ -5,6 +5,7 @@ import com.hkc.easy.OneAndTwoBitCharacter;
 import com.hkc.easy.RemovingElements;
 import com.hkc.easy.SearchInsert;
 import com.hkc.medium.AddTwoNumbers;
+import com.hkc.medium.MaxArea;
 
 public class Test {
     public static void main(String[] args) {
@@ -14,7 +15,8 @@ public class Test {
        System.out.println(restul);*/
       //testRemoveElement();
       //  testSearchInsert();
-        testAddTwoNumbers();
+      //  testAddTwoNumbers();
+            testMaxArea();
 
     }
 
@@ -68,5 +70,14 @@ public class Test {
              System.out.println(listNode.val);
              listNode = listNode.next ;
          }
+    }
+
+
+    public  static  void testMaxArea(){
+        MaxArea maxArea = new MaxArea();
+        //int[] height = {1,8,6,2,5,4,8,3,7};
+        int[] height = {1,1};
+        int max = maxArea.maxArea(height);
+        System.out.println(max);
     }
 }
