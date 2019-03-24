@@ -6,6 +6,9 @@ import com.hkc.easy.RemovingElements;
 import com.hkc.easy.SearchInsert;
 import com.hkc.medium.AddTwoNumbers;
 import com.hkc.medium.MaxArea;
+import com.hkc.medium.ThreeSum;
+
+import java.util.List;
 
 public class Test {
     public static void main(String[] args) {
@@ -16,7 +19,8 @@ public class Test {
       //testRemoveElement();
       //  testSearchInsert();
       //  testAddTwoNumbers();
-            testMaxArea();
+       //     testMaxArea();
+        testThreeSum();
 
     }
 
@@ -80,4 +84,25 @@ public class Test {
         int max = maxArea.maxArea(height);
         System.out.println(max);
     }
+
+    public static void testThreeSum(){
+
+        ThreeSum threeSum = new ThreeSum();
+          int[] nums = {-1, 0, 1, 2, -1, -4} ;
+       // int[] nums = {1, -1, 0,-1, 0, 3, -3, -1, -4} ;
+        List<List<Integer>> sumlist = threeSum.threeSum(nums);
+
+        for(List<Integer> s :sumlist){
+            for(Integer n :s){
+                System.out  .print(n);
+            }
+            System.out.println("");
+        }
+
+
+
+     }
+
+
+
 }
