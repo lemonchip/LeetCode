@@ -6,6 +6,7 @@ import com.hkc.easy.RemovingElements;
 import com.hkc.easy.SearchInsert;
 import com.hkc.medium.AddTwoNumbers;
 import com.hkc.medium.MaxArea;
+import com.hkc.medium.SwapPairs;
 import com.hkc.medium.ThreeSum;
 
 import java.util.List;
@@ -20,7 +21,8 @@ public class Test {
       //  testSearchInsert();
       //  testAddTwoNumbers();
        //     testMaxArea();
-        testThreeSum();
+        //testThreeSum();
+        testSwapPairs();
 
     }
 
@@ -99,8 +101,29 @@ public class Test {
             System.out.println("");
         }
 
+     }
 
+     public static void testSwapPairs(){
 
+         SwapPairs swapPairs = new SwapPairs();
+         int[] num1 = {1,2,3,4} ;
+         int i = 1 ;
+         ListNode listNode1 = new  ListNode(1) ;
+         while(i<num1.length){
+             ListNode temp1 = listNode1 ;
+             while (temp1.next!=null) {
+
+                 temp1 = temp1.next ;
+             }
+             temp1.next = new ListNode(num1[i]);
+             i++;
+         }
+         ListNode listNode = swapPairs.swapPairs(listNode1) ;
+
+         while (listNode!=null){
+             System.out.println(listNode.val);
+             listNode = listNode.next ;
+         }
      }
 
 
