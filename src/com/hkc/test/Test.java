@@ -4,10 +4,7 @@ import com.hkc.data_structure.ListNode;
 import com.hkc.easy.OneAndTwoBitCharacter;
 import com.hkc.easy.RemovingElements;
 import com.hkc.easy.SearchInsert;
-import com.hkc.medium.AddTwoNumbers;
-import com.hkc.medium.MaxArea;
-import com.hkc.medium.SwapPairs;
-import com.hkc.medium.ThreeSum;
+import com.hkc.medium.*;
 
 import java.util.List;
 
@@ -22,7 +19,8 @@ public class Test {
       //  testAddTwoNumbers();
        //     testMaxArea();
         //testThreeSum();
-        testSwapPairs();
+       // testSwapPairs();
+        testCombinationSum();
 
     }
 
@@ -126,6 +124,18 @@ public class Test {
          }
      }
 
+    public static void testCombinationSum(){
+        CombinationSum combinationSum = new CombinationSum();
+        int[] candidates = {2,3,5};
+        int target = 8 ;
+       List<List<Integer>> result = combinationSum.combinationSum(candidates,target);
+                for(List<Integer> g : result){
+                    System.out.println(" ");
+                    for(Integer i : g){
+                        System.out.print(i);
+                    }
+                }
 
+    }
 
 }
