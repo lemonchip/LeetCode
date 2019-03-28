@@ -36,4 +36,33 @@ public class CombinationSum {
         }
         return result ;
     }
+
+    public List<List<Integer>> combinationSum3(int[] candidates, int target) {
+
+        List<Integer> one = new ArrayList<Integer>();
+        List<List<Integer>> result  = new ArrayList<List<Integer>>();
+        for(int i = 0;i<candidates.length;i++){
+            one = group(candidates,target-candidates[i]);
+            if(!one.isEmpty()){
+                result=new ArrayList<List<Integer>>();
+            }
+        }
+
+        return result ;
+    }
+    public List<Integer> group(int[] candidates,int num){
+
+        ArrayList<Integer> temp = new ArrayList<>();
+        if(num<0)
+            return new ArrayList<Integer>() ;
+        for(int i = 0 ;i<candidates.length;i++){
+            if(candidates[i]==num){
+                 temp.add(candidates[i]);
+                 return temp ;
+            }else{
+                return new ArrayList<Integer>(group(candidates,num-candidates[i]));
+            }
+        }
+        return new ArrayList<Integer>(1) ;
+    }
 }

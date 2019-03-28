@@ -128,7 +128,7 @@ public class Test {
         CombinationSum combinationSum = new CombinationSum();
         int[] candidates = {2,3,5};
         int target = 8 ;
-       List<List<Integer>> result = combinationSum.combinationSum(candidates,target);
+       List<List<Integer>> result = combinationSum.combinationSum3(candidates,target);
                 for(List<Integer> g : result){
                     System.out.println(" ");
                     for(Integer i : g){
